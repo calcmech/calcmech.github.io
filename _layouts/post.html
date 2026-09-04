@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta" style="color:black; font-size:20px;">
+      {%- if page.author -%}
+       <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%} <br />
+      {%- if page.journal -%}
+        In <i>{{ page.journal }}</i>, Vol. {{ page.volume }}, No. {{ page.number }}, &nbsp;
+      {%- endif -%}
+       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+    </p>
+  </header>
+  
+  {%- if page.abstract -%}
+    <h2>Abstract</h2>
+    <p>{{ page.abstract }}</p>
+  {%- endif -%}
+
+  <hr />
+  <br />
+
+  {%- if page.draft -%}
+    <div class="post-content e-content draft-watermark" itemprop="articleBody">
+      {{ content }}
+    </div>
+  {%- else -%}
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
