@@ -9,6 +9,9 @@ layout: default
 {%- endif -%}
 
   <header class="post-header">
+      {%- if page.draft -%}
+        <p class="post-meta" style="color:red; font-size:25px; font-weight: bold;">DRAFT // IN PROGRESS</p>
+      {%- endif -%}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta" style="color:black; font-size:20px;">
       {%- if page.author -%}
@@ -21,9 +24,6 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {%- if page.draft -%}
-        (NOTE THAT THIS PIECE IS STILL A DRAFT)
-      {%- endif -%}
     </p>
   </header>
   

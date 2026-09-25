@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
 _Calculus Mécanique_ is a experimental, non-academic technical publication, run by "professional amateurs," that aims for the rigour of mainstream academic publishers like _Elsevier_ or _Springer_. We are interested in publishing articles, monographs, technical reports, and other literature items in computer science, and their application to the natural sciences and useful arts. 

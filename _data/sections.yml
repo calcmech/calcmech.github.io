@@ -1,0 +1,10 @@
+- id: 0
+  name: "Data Blogging"
+  desc: "Self-published, blogging-style pieces where authors present cursory and preliminary data analysis. A prescribed review process is not given, but in some cases there may be some feedback - sometimes \"on the books,\" other times not so."
+  rlev: 0 # TODO: make a yaml database for different levels of peer-review
+          # 0 = no review I guess :p 
+- id: 1
+  name: "Working Technical Reports"
+  desc: "Technical reports, writeups, and whatnot that are currently in progress"
+  rlev: 0 
+
